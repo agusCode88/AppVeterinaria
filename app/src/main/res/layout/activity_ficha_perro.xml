@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Sección 1 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_principal_app"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ImagenAvatarPerro"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        tools:srcCompat="@android:drawable/ic_menu_camera" />
+
+                    <EditText
+                        android:id="@+id/campoNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ImagenAvatarPerro"
+                        android:layout_margin="10dp"
+                        android:hint="Nombre Animal">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/campoPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ImagenAvatarPerro"
+                        android:layout_below="@id/campoNombre"
+                        android:layout_margin="10dp"
+                        android:inputType="number"
+                        android:hint="Peso Animal">
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/campoEdad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ImagenAvatarPerro"
+                        android:layout_below="@id/campoPeso"
+                        android:layout_margin="10dp"
+                        android:inputType="number"
+                        android:hint="Edad Animal">
+                    </EditText>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/campoEdad"
+                        android:layout_alignStart="@id/campoEdad"
+                        android:layout_alignLeft="@id/ImagenAvatarPerro"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioMacho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Macho" />
+
+                        <RadioButton
+                            android:id="@+id/radioHembra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hembra" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <!-- Sección 2 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp">
+
+                    <View
+                        android:id="@+id/separacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/etiquetaDiagnostico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/black"
+                        android:text="Diagnóstico y Tratamiento"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/descripcionDiagnostico"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/etiquetaDiagnostico"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/black"
+                        android:hint="Escriba acá la atención al animal."
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/etiquetanivelGravedad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="25dp"
+                        android:layout_below="@id/descripcionDiagnostico"
+                        android:textColor="@color/black"
+                        android:text="Gravedad"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/nivelGravedad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etiquetanivelGravedad"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:progressTint="@color/color_principal_app"
+                        android:numStars="5"
+                        android:rating="2.5"
+                        android:stepSize="0.5" />
+
+                    <Button
+                        android:id="@+id/botonTratamiento"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/nivelGravedad"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/light_green"
+                        android:padding="10dp"
+                        android:text="Ver Datos"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+</layout>

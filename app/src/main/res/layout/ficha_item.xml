@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/contenedorPrincipalItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/imagenAnimalItem"
+                    android:layout_width="160dp"
+                    android:layout_height="95dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    app:srcCompat="@drawable/caninos"></ImageView>
+
+                <LinearLayout
+                    android:id="@+id/contenedorItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/imagenAnimalItem"
+                    android:layout_toRightOf="@id/imagenAnimalItem"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nombreAnimalItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="Amadeus"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/pesoAnimalItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="23 KG"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/edadAnimalItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7 Años"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@id/contenedorItem"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@drawable/baseline_chevron_right_24"></ImageView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

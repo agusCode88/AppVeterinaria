@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Consulta Perruna</string>
+    <string name="resultado_edad">Tu edad humana es de %d</string>
+    <string name="mensaje_validacion">Tienes que ingresar una edad</string>
+    <string name="mensaje_exito">Acá una actividad</string>
+    <string name="boton_calcular">CALCULAR EDAD</string>
+    <string name="boton_ficha">IR AL REGISTRO</string>
+    <string name="mensaje_toast_ficha_perro">Tienes que ingresar los datos del perro</string>
+
+
+</resources>

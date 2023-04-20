@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloApp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:text="Bienvenid@ a Edad Canina"
+        android:textColor="@color/white"
+        android:background="@color/color_principal_app"
+        android:adjustViewBounds="true"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imagenHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:layout_margin="15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/caninos"
+      />
+
+    <TextView
+        android:id="@+id/preguntaEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿ Qué deseas hacer ? "
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/respuestaEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:layout_height="0dp"></TextView>
+
+
+    <Button
+        android:id="@+id/bontonNavegar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_principal_app"
+        android:text="@string/boton_ficha"/>
+
+    <Button
+        android:id="@+id/botonListado"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirListaAnimales"
+        android:background="@color/color_principal_app"
+        android:text="Ver Ficha Animal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="Bootcamp UNAB"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:gravity="center"></TextView><!-- Cierre del View!-->
+
+</LinearLayout>
